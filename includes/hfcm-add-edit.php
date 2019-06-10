@@ -11,6 +11,7 @@ if ( ! isset( $id ) ) {
 // Localize the script with new data
 $translation_array = array(
 	'header'         => __( 'Header', '99robots-header-footer-code-manager' ),
+	'body'         => __( 'After Body Tag', '99robots-header-footer-code-manager' ),
 	'before_content' => __( 'Before Content', '99robots-header-footer-code-manager' ),
 	'after_content'  => __( 'After Content', '99robots-header-footer-code-manager' ),
 	'footer'         => __( 'Footer', '99robots-header-footer-code-manager' ),
@@ -246,10 +247,11 @@ wp_enqueue_script( 'hfcm_showboxes' );
 			</td>
 		</tr>
 		<?php
+		// Arrays for Display Location
 		if ( in_array( $display_on, array( 's_posts', 's_pages', 's_categories', 's_custom_posts', 's_tags', 'latest_posts' ) ) ) {
-			$larray = array( 'header' => 'Header', 'before_content' => 'Before Content', 'after_content' => 'After Content', 'footer' => 'Footer' );
+			$larray = array( 'header' => 'Header', 'body' => 'After Body Tag', 'before_content' => 'Before Content', 'after_content' => 'After Content', 'footer' => 'Footer' );
 		} else {
-			$larray = array( 'header' => 'Header', 'footer' => 'Footer' );
+			$larray = array( 'header' => 'Header', 'body' => 'After Body Tag', 'footer' => 'Footer' );
 		}
 		?>
 		<tr id="locationtr" style="<?php echo $locationstyle; ?>">

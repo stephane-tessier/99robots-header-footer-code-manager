@@ -1,9 +1,9 @@
 === Header Footer Code Manager ===
 Contributors: 99robots, charliepatel
-Tags: header, footer, code manager, snippet, functions.php, tracking, google analytics, adsense, verification, pixel
+Tags: header, after body tag, footer, code manager, snippet, functions.php, tracking, google analytics, adsense, verification, pixel
 Requires at least: 4.0
-Tested up to: 5.1.1
-Stable tag: 1.1.3
+Tested up to: 5.2.1
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://99robots.com
@@ -25,7 +25,7 @@ Header Footer Code Manager by 99 Robots is a easy interface to add snippets to t
 * Manage which posts or pages the script loads
 * Supports custom post types
 * Supports ability to load only on a specific post or page, or latest posts
-* Control where exactly on the page the script is loaded - head, footer, before content, or after content
+* Control where exactly on the page the script is loaded - head, , after opening body tag, footer, before content, or after content
 * Script can load only on desktops or mobile. Enable or disable one or the other.
 * Use shortcodes to manually place the code anywhere
 * Label every snippet for easy reference
@@ -43,9 +43,10 @@ Header Footer Code Manager by 99 Robots is a easy interface to add snippets to t
 
 = INJECTION LOCATIONS =
 1. Head section
-2. Footer
-3. Top of content
-4. Bottom of content
+2. After opening Body tag
+3. Footer
+4. Top of content
+5. Bottom of content
 
 = DEVICE OPTIONS =
 * Show on All Devices
@@ -106,6 +107,10 @@ A. Free plugins rely on user feedback. Therefore, the best thing you can do for 
 A. If your script is not supported, just let us know and we'll look into it immediately. We will do our best to ensure all reputable services are supported. When requesting support for a particular script, it would be nice to get a sample of the script so that we can see its structure.
 
 == Changelog ==
+
+= 2.0.0 = 2019-06-11
+* UPDATED: Compatibility with WordPress 5.2.1
+* ADDED : The update everyone has been asking for! - Ability to add code snippets after the opening body tag.
 
 = 1.1.3 = 2019-05-03
 * UPDATED: Compatibility with WordPress 5.1.1

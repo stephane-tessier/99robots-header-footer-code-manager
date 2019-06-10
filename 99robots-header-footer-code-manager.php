@@ -3,7 +3,7 @@
  * Plugin Name: Header Footer Code Manager
  * Plugin URI: https://99robots.com/products
  * Description: Header Footer Code Manager by 99 Robots is a quick and simple way for you to add tracking code snippets, conversion pixels, or other scripts required by third party services for analytics, tracking, marketing, or chat functions. For detailed documentation, please visit the plugin's <a href="https://99robots.com/"> official page</a>.
- * Version: 1.1.3
+ * Version: 2.0.0
  * Author: 99robots
  * Author URI: https://99robots.com/
  * Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -281,10 +281,10 @@ function hfcm_add_snippets( $location = '', $content = '' ) {
 	$beforecontent = '';
 	$aftercontent  = '';
 
-	if ( $location && in_array( $location, array( 'header', 'footer' ) ) ) {
+	if ( $location && in_array( $location, array( 'header', 'body','footer' ) ) ) {
 		$display_location = "location='$location'";
 	} else {
-		$display_location = "location NOT IN ( 'header', 'footer' )";
+		$display_location = "location NOT IN ( 'header', 'body', 'footer' )";
 	}
 
 	$table_name  = $wpdb->prefix . 'hfcm_scripts';
@@ -378,6 +378,12 @@ function hfcm_add_snippets( $location = '', $content = '' ) {
 	// Return results after the loop finishes
 	return $beforecontent . $content . $aftercontent;
 }
+
+// Function to add snippets after the body tag
+function hfcm_body_scripts() {
+	hfcm_add_snippets( 'body' );
+}
+add_action( 'wp_body_open', 'hfcm_body_scripts' );
 
 // Function to add snippets in the header
 function hfcm_header_scripts() {

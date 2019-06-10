@@ -2,10 +2,11 @@
 
 function hfcm_showotherboxes( type ) {
 	var header = '<option value="header">'+ hfcm_localize.header +'</option>',
+		body = '<option value="body">'+ hfcm_localize.body +'</option>',
 		before_content = '<option value="before_content">'+ hfcm_localize.before_content +'</option>',
 		after_content = '<option value="after_content">'+ hfcm_localize.after_content +'</option>',
 		footer = '<option value="footer">'+ hfcm_localize.footer +'</option>',
-		all_options = header + before_content + after_content + footer;
+		all_options = header + body + before_content + after_content + footer;
 
 	if (type == 'All') {
 		jQuery('#ex_pages, #ex_posts,  #locationtr').show();

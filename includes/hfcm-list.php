@@ -171,6 +171,7 @@ class Hfcm_Snippets_List extends WP_List_Table {
 
 				$larray = array(
 					'header'         => esc_html__( 'Header', '99robots-header-footer-code-manager' ),
+					'body'         	 => esc_html__( 'After Body Tag', '99robots-header-footer-code-manager' ),
 					'before_content' => esc_html__( 'Before Content', '99robots-header-footer-code-manager' ),
 					'after_content'  => esc_html__( 'After Content', '99robots-header-footer-code-manager' ),
 					'footer'         => esc_html__( 'Footer', '99robots-header-footer-code-manager' ),
